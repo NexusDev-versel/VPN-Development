@@ -1,0 +1,33 @@
+{
+  "log": {
+    "loglevel": "info",
+    "access": "D:\\Файлы не виндовс!!!!\\Файлы, папки и документы\\Проекты\\Программирование\\VPN\\HMAO-VPN\\logs\\xray_local-1_access.log",
+    "error": "D:\\Файлы не виндовс!!!!\\Файлы, папки и документы\\Проекты\\Программирование\\VPN\\HMAO-VPN\\logs\\xray_local-1_error.log"
+  },
+  "inbounds": [
+    {
+      "tag": "in-local-1",
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "e8236f38-9105-4bc5-9876-e774a733bd1f"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}

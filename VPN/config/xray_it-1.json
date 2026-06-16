@@ -1,0 +1,71 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "in-it-1",
+      "listen": "0.0.0.0",
+      "port": 24443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "56db3b6a-fedd-4908-9458-fb3ef3103d93",
+            "flow": "xtls-rprx-vision"
+          },
+          {
+            "id": "f13483b4-68a7-42ab-97c4-e99fb4ad4e63",
+            "flow": "xtls-rprx-vision"
+          },
+          {
+            "id": "ab495652-1bf6-4ada-bb54-9e479dd8f4dc",
+            "flow": "xtls-rprx-vision"
+          },
+          {
+            "id": "eb8b4168-ea82-429d-92f7-9eb14ea6650d",
+            "flow": "xtls-rprx-vision"
+          },
+          {
+            "id": "501de4f1-5a10-4fe3-aa84-6ceb3153da4e",
+            "flow": "xtls-rprx-vision"
+          },
+          {
+            "id": "80a2f406-b648-465a-a58a-672cc8b4c1a6",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "www.cloudflare.com:443",
+          "xver": 0,
+          "serverNames": [
+            "www.cloudflare.com"
+          ],
+          "privateKey": "cMHpZ5JMGRwEnjQ0SOH8AF-8n5_33okbgB72TgvJV18",
+          "shortIds": [
+            "2e2188a66758a5a8"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "domainStrategy": "UseIPv4"
+    }
+  ],
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  }
+}

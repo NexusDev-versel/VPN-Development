@@ -1,0 +1,53 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "in-be-1",
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "e937158b-ddc1-4e95-bd6e-b3b67a5fa29e"
+          },
+          {
+            "id": "a4aab49f-687b-458b-8071-06fed7ac9c90"
+          },
+          {
+            "id": "035aa864-fdd4-4586-83d5-b0649dc44f20"
+          },
+          {
+            "id": "68808ebd-98c0-4db8-be75-97e710b89c24"
+          },
+          {
+            "id": "9f71ceb6-e90d-43ea-b7c0-2967192f2f4f"
+          },
+          {
+            "id": "11e7469e-8795-4eb5-a60f-6f8dc31e5838"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "domainStrategy": "UseIPv4"
+    }
+  ],
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  }
+}

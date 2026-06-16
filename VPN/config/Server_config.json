@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "bot_token": "8357826964:AAGNUzZQl0FyeVo94zTxu4wvgw8HsnPCGwE",
+  "sub_base_url": "https://sub.nexuslauncher.fun/api/sub",
+  "sub_scheme": "https",
+  "sub_bind": "0.0.0.0",
+  "sub_port": 8081,
+  "sub_path_prefix": "/api/sub",
+  "sub_import_path": "/import",
+  "xray_autorestart": true,
+  "xray_exec": "xray.exe",
+  "brand_name": "HMAO-VPN",
+  "sub_display_name": "HMAO-VPN",
+  "v2raytun_sub_deeplink": "https://sub.nexuslauncher.fun/import?url={url}",
+  "servers": [
+    {
+      "id": "kr-1",
+      "name": "Корея",
+      "flag": "🇰🇷",
+      "host": "78.153.150.199",
+      "port": 8080,
+      "protocol": "vless",
+      "network": "tcp",
+      "security": "none",
+      "listen": "0.0.0.0",
+      "remark": "Korea VPS",
+      "region": "kr",
+      "enabled": true,
+      "managed_local": false,
+      "log_mode": "none",
+      "dns_servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ],
+      "outbound_domain_strategy": "UseIPv4",
+      "deploy": {
+        "type": "ssh",
+        "host": "78.153.150.199",
+        "port": 22,
+        "user": "root",
+        "key_path": "/root/.ssh/hmao_vps",
+        "remote_config_path": "/usr/local/etc/xray/config.json",
+        "restart_cmd": "systemctl restart xray"
+      }
+    },
+    {
+      "id": "it-1",
+      "name": "Италия",
+      "flag": "🇮🇹",
+      "host": "45.155.68.119",
+      "port": 24443,
+      "protocol": "vless",
+      "network": "tcp",
+      "security": "reality",
+      "listen": "0.0.0.0",
+      "remark": "Italy VPS",
+      "region": "it",
+      "enabled": true,
+      "managed_local": true,
+      "log_mode": "none",
+      "deploy": {
+        "type": "ssh",
+        "host": "45.155.68.119",
+        "port": 22,
+        "user": "root",
+        "key_path": "/root/.ssh/hmao_vps",
+        "remote_config_path": "/usr/local/etc/xray/config.json",
+        "restart_cmd": "systemctl restart xray"
+      },
+      "dns_servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ],
+      "outbound_domain_strategy": "UseIPv4",
+      "telegram_mtproto": {
+        "enabled": true,
+        "host": "45.155.68.119",
+        "port": 8443,
+        "secret": "f465762c0a79a7f548ecbc9482135321",
+        "secret_prefix": "dd"
+      },
+      "reality": {
+        "server_name": "www.cloudflare.com",
+        "dest": "www.cloudflare.com:443",
+        "public_key": "s_8ETHzKnoDE-siHdPcan6JMrITaIssT8kEHmCxr4xw",
+        "private_key": "KMBgbjqNE1HrvFBDqujFrQ1DkqOwfupAUFcvGvydnlg",
+        "short_id": "2e2188a66758a5a8",
+        "fingerprint": "chrome",
+        "spider_x": "/",
+        "flow": "",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "id": "be-1",
+      "name": "Бельгия",
+      "flag": "🇧🇪",
+      "host": "113.30.152.222",
+      "port": 8080,
+      "protocol": "vless",
+      "network": "tcp",
+      "security": "none",
+      "listen": "0.0.0.0",
+      "remark": "Belgium VPS",
+      "region": "be",
+      "enabled": true,
+      "managed_local": false,
+      "log_mode": "none",
+      "dns_servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ],
+      "outbound_domain_strategy": "UseIPv4",
+      "deploy": {
+        "type": "ssh",
+        "host": "113.30.152.222",
+        "port": 22,
+        "user": "root",
+        "key_path": "/root/.ssh/hmao_vps",
+        "remote_config_path": "/usr/local/etc/xray/config.json",
+        "restart_cmd": "systemctl restart xray"
+      }
+    }
+  ],
+  "deploy_defaults": null,
+  "subscription_check_interval_sec": 30,
+  "subscription_terms_months": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "subscription_plans": [
+    {
+      "months": 1,
+      "price_rub": 139
+    },
+    {
+      "months": 3,
+      "price_rub": 419
+    },
+    {
+      "months": 6,
+      "price_rub": 759
+    },
+    {
+      "months": 12,
+      "price_rub": 1379
+    }
+  ],
+  "payment_provider": "yookassa",
+  "yookassa_webhook_path": "/api/yookassa/webhook",
+  "yookassa_return_url": "https://sub.nexuslauncher.fun/return",
+  "yookassa": {
+    "shop_id": "",
+    "secret_key": "",
+    "return_url": "https://sub.nexuslauncher.fun/return",
+    "webhook_path": "/api/yookassa/webhook",
+    "capture": true,
+    "verify_webhook": true,
+    "api_base": "https://api.yookassa.ru/v3"
+  }
+}
