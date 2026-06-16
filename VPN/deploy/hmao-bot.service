@@ -1,0 +1,17 @@
+﻿[Unit]
+Description=HMAO VPN Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/HMAO-VPN
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/etc/hmao-bot.env
+Environment=HMAO_SSH_KEY_PATH=/root/.ssh/hmao_vps
+ExecStart=/opt/HMAO-VPN/.venv/bin/python bot/Bot.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
